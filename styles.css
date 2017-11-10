@@ -40,3 +40,6 @@
 #button {
   display: none;
 }
+#button.visible {
+  display:block;
+}

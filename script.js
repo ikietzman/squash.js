@@ -25,6 +25,7 @@ paddle.style.top = paddleTop + 'px';
 
 let inPlay = setInterval (function() {
   document.body.style.backgroundColor = '';
+  document.getElementById('button').className = "";
   ballTop += 1*vDirection*speed;
   ballToppx = ballTop + 'px';
   ballLeft += 1*hDirection*speed;
@@ -61,7 +62,7 @@ let inPlay = setInterval (function() {
       clearInterval(inPlay);
       // document.getElementById('button').addEventListener('click', function(){
         // document.body.style.backgroundColor = 'white';
-        // document.getElementById('button')
+      document.getElementById('button').className = "visible";
 
         // init();
         // inPlay();
@@ -78,18 +79,18 @@ document.addEventListener("keydown", function(event){
     // down
     if (event.keyCode == 40) {
       if (paddleTop < 300){
-        paddleTop += 5;
+        paddleTop += 10;
         paddle.style.top = paddleTop + 'px';
       }
     }
     // up
     if (event.keyCode == 38) {
       if (paddleTop > 0) {
-      paddleTop -= 5;
+      paddleTop -= 10;
       paddle.style.top = paddleTop + 'px';
     }
     }
 })
 };
-
+document.getElementById('button').addEventListener('click', init);
 init();
