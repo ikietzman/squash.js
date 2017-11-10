@@ -24,6 +24,7 @@ paddle.style.top = paddleTop + 'px';
 
 
 let inPlay = setInterval (function() {
+  document.body.style.backgroundColor = '';
   ballTop += 1*vDirection*speed;
   ballToppx = ballTop + 'px';
   ballLeft += 1*hDirection*speed;
@@ -64,10 +65,10 @@ let inPlay = setInterval (function() {
 
         // init();
         // inPlay();
-      });
+      };
     }
   }
-}, 10)
+, 10)
 
 // move paddle on key input
 document.addEventListener("keydown", function(event){
